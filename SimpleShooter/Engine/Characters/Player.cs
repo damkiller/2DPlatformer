@@ -28,7 +28,7 @@ namespace SimpleShooter.Engine.Characters
         public Color color = Color.White;
         public SpriteEffects x_movement_flip = SpriteEffects.None;
 
-        public Func<Player, List<(CollisionSide, int)>> Map_Collision;
+        public Func<Player, List<(CollisionSide,float)>> Map_Collision;
 
         public PlayerStates player_actions;
 

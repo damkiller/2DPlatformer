@@ -30,6 +30,32 @@ namespace SimpleShooter.Engine
 
         public World()
         {
+            Preprare_World();
+            World_Generation();
+
+
+        }
+        public void Preprare_World()
+        {
+            playerpos = new Box<Vector2>(new Vector2(0, 0));
+            map = new Map(playerpos);
+            player = new Player(new Vector2(64, 64), new Vector2(100, 100), playerpos);
+            player.sprite = TexturesPlayer.base_sprite;
+            player.Map_Collision = new(map.collisionDetectionSystem.CheckCollision);
+        }
+        public void Testing()
+        {
+            map[6, 12] = new Collidable_tile(LunarTileset.island);
+            map[7, 12] = new Collidable_tile(LunarTileset.island);
+            map[8, 12] = new Collidable_tile(LunarTileset.island);
+            map[7, 11] = new Collidable_tile(LunarTileset.island);
+            map[5, 10] = new Collidable_tile(MonsterTextures.hornet);
+            map[7, 10] = new Collidable_tile(MonsterTextures.mage);
+            map[3, 10] = new Collidable_tile(MonsterTextures.moon);
+            map[4, 10] = new Collidable_tile(MonsterTextures.dragon);
+        }
+        public void World_Generation()
+        {
             playerpos = new Box<Vector2>(new Vector2(0, 0));
             map = new Map(playerpos);
             player = new Player(new Vector2(64, 64), new Vector2(100, 100), playerpos);
@@ -44,11 +70,13 @@ namespace SimpleShooter.Engine
             map[6, 9] = new Collidable_tile(LunarTileset.island);
             map[7, 9] = new Collidable_tile(LunarTileset.island);
             map.CreateShape(new Collidable_tile(LunarTileset.island), new Circle(new Microsoft.Xna.Framework.Point(8, 8)), new Microsoft.Xna.Framework.Point(20, 15));
+            map.CreateShape(new Collidable_tile(LunarTileset.island), new Circle(new Microsoft.Xna.Framework.Point(8, 8)), new Microsoft.Xna.Framework.Point(40, 15));
+            map.CreateShape(new Collidable_tile(LunarTileset.island), new Circle(new Microsoft.Xna.Framework.Point(8, 8)), new Microsoft.Xna.Framework.Point(60, 15));
 
 
-            
 
-            player.Map_Collision = new(map.CheckCollision);
+
+            player.Map_Collision = new(map.collisionDetectionSystem.CheckCollision);
 
         }
         public void Initialize()
