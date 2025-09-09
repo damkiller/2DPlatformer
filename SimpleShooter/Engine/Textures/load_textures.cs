@@ -10,10 +10,13 @@ namespace SimpleShooter.Engine.Textures
     {
         public LunarTileset tileset;
         public TexturesPlayer texturesPlayer;
+        public MonsterTextures monsterTextures;
         public textures()
         {
             tileset = new LunarTileset();
             texturesPlayer = new TexturesPlayer();
+            monsterTextures = new MonsterTextures();
+
         }
 
 

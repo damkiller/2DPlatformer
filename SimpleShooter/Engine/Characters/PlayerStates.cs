@@ -42,7 +42,7 @@ namespace SimpleShooter.Engine.Characters
             falling = new ActiveState(FallingUpdate);
             falling_acceration = new Polynomial(new List<float> { 1f, 2 });
             jump_acceration = new Polynomial(new List<float> { -0.5f, 12 });
-            acceration = new Acceration(speed, max_speed, speed_acceleration);
+            acceration = new Acceration(2, 8, 4f);
         }
 
         public void Update(KeyboardState keyboard, GameTime gameTime)
@@ -82,20 +82,20 @@ namespace SimpleShooter.Engine.Characters
             prev_collisions = new();
             if (player.NextMove != Vector2.Zero)
             {
-                foreach (var item in player.Map_Collision(player))
+                foreach ((CollisionSide, float) item in player.Map_Collision(player))
                 {
                     switch (item.Item1)
                     {
                         case CollisionSide.Left:
-                            player.NextMove.X = -item.Item2;
+                            player.NextMove.X = item.Item2;
                             prev_collisions.Add(CollisionSide.Left);
                             break;
                         case CollisionSide.Right:
-                            player.NextMove.X = -item.Item2;
+                            player.NextMove.X = item.Item2;
                             prev_collisions.Add(CollisionSide.Right);
                             break;
                         case CollisionSide.Top:
-                            player.NextMove.Y = -item.Item2;
+                            player.NextMove.Y = item.Item2;
                             prev_collisions.Add(CollisionSide.Top);
                             break;
                         case CollisionSide.Bottom:
@@ -141,7 +141,6 @@ namespace SimpleShooter.Engine.Characters
         {
             player.shift.value = Vector2.Zero;
             player.pos = player.player_zone.Center.ToVector2();
-
 
 
         }
