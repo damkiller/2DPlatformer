@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>E:/VisualStudioCreatonPlace/projects/SimpleShooter/SimpleShooter/Content/Backround/Background_0.png</File>
+    <File>E:/VisualStudioCreatonPlace/projects/SimpleShooter/SimpleShooter/Content/Backround/Background_1.png</File>
+    <File>E:/VisualStudioCreatonPlace/projects/SimpleShooter/SimpleShooter/Content/Backround/brush.png</File>
+    <File>E:/VisualStudioCreatonPlace/projects/SimpleShooter/SimpleShooter/Content/Backround/Grass_background_1.png</File>
+    <File>E:/VisualStudioCreatonPlace/projects/SimpleShooter/SimpleShooter/Content/Backround/Grass_background_2.png</File>
+    <File>E:/VisualStudioCreatonPlace/projects/SimpleShooter/SimpleShooter/Content/Backround/Salt.png</File>
+    <File>E:/VisualStudioCreatonPlace/projects/SimpleShooter/SimpleShooter/Content/Characters/DarkSamurai (64x64).png</File>
+    <File>E:/VisualStudioCreatonPlace/projects/SimpleShooter/SimpleShooter/Content/monsters/monochrome_32x32.png</File>
+    <File>E:/VisualStudioCreatonPlace/projects/SimpleShooter/SimpleShooter/Content/monsters/monochrome_32x32_transparent.png</File>
+    <File>E:/VisualStudioCreatonPlace/projects/SimpleShooter/SimpleShooter/Content/Tests/tile_test.png</File>
+    <File>E:/VisualStudioCreatonPlace/projects/SimpleShooter/SimpleShooter/Content/Tileset/1bit 16px patterns and tiles.png</File>
+    <File>E:/VisualStudioCreatonPlace/projects/SimpleShooter/SimpleShooter/Content/Tileset/lunar1b_tileset_compact.png</File>
+    <File>E:/VisualStudioCreatonPlace/projects/SimpleShooter/SimpleShooter/Content/Tileset/Tiles.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File>Characters/DarkSamurai.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File>Tileset/lunar.png</File>
+    <File>Tileset/3DTiles.png</File>
+  </DestFiles>
+</SourceFileCollection>
